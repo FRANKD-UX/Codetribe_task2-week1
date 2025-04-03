@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://brandeps.com/icon-download/D/Dev-icon-vector-01.svg" alt="Logo" class="logo" width="50" height="50">
+            <div class="logo-particles"></div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About me</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="glitch-text" data-text="Creative Developer">Creative Developer</h1>
+                <p class="typewriter">Building digital experiences that inspire.</p>
+                <div class="cta-buttons">
+                    <a href="#about" class="btn primary-btn">Learn More</a>
+                    <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="particles"></div>
+            </div>
+        </section>
+        
+        <section class="featured-work">
+            <h2 class="section-title">Featured Work</h2>
+            <div class="carousel-container">
+                <button class="carousel-arrow left-arrow" onclick="moveCarousel('left')">&#10094;</button>
+                <div class="carousel">
+                  <div class="carousel-card">
+                    <div class="card-content">
+                      <h3>Card 1</h3>
+                      <p>Description here</p>
+                    </div>
+                  </div>
+                  <div class="carousel-card">
+                    <div class="card-content">
+                      <h3>Card 2</h3>
+                      <p>Description here</p>
+                    </div>
+                  </div>
+                  <div class="carousel-card">
+                    <div class="card-content">
+                      <h3>Card 3</h3>
+                      <p>Description here</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-arrow right-arrow" onclick="moveCarousel('right')">&#10095;</button>
+              </div>
+              
+              <button class="carousel-arrow right-arrow" onclick="moveCarousel('right')">&#10095;</button>
+            </div>
+          </section>
+          
+        
+
+        <section id="about" class="profile">
+            <div class="profile-pic-container">
+                <img src="me.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="profile-pic-overlay"></div>
+            </div>
+            <div class="bio">
+                <h2 class="reveal-text">About Me</h2>
+                <p class="reveal-text">Passionate about web development, troubleshooting, and refining interactive design. Always eager to explore new coding challenges! Efficient in the following technologies:</p>
+                <div class="skills">
+                    <div class="skill-item" data-skill="HTML">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-item" data-skill="CSS">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-item" data-skill="JavaScript">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item" data-skill="React">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-item" data-skill="Node.js">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2 class="section-title">live Demo</h2>
+            <div class="video-container">
+                <iframe width="60%" height="315" src="https://www.youtube.com/embed/y-OghdKUpUY?si=GVmTcVJgerC4gvMI" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+                <div class="video-overlay">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                        <span class="form-highlight"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                        <span class="form-highlight"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                        <span class="form-highlight"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Johanneburg,South Africa</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Frankdafrica@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+27786029077</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+            <ul class="social-media">
+                <li>
+                    <a href="https://www.linkedin.com/in/frank-ndlovu-338abb288/" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/FRANKD-UX" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/i/flow/login" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,176C960,192,1056,192,1152,170.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
